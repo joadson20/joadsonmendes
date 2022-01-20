@@ -1,0 +1,142 @@
+@charset "UTF-8"
+@import url('https://fonts.googleapis.com/css2? family= Ubuntu+Mono:wght@700 & family= Ubuntu:wght@500 & display=swap');
+/* defini as propriedades de todos os elementos da página .*/
+{
+    /* Remove a margem externa de todos os lados dos elementos.*/
+    margin: 0;
+    /* Remove o espaçamento interno de todos os lados dos elementos.*/
+    padding: 0;
+    /* O preenchimento e a borda serão incluidas na largura e na altura.*/
+    box-sizing: border-box;
+    /* Define o tipo da fonte.*/
+    font-family: "Ubuntu", sans-serif;
+}
+body{
+    /* Cor do elemento*/
+    background-color: #2e2e2e;
+    /* Altura mínima do elemento.*/
+    /* Unidade de tamanho da tela.*/
+    min-height: 100vh;
+    /* Torna o elemento um flex container automaticamente, transformando todos os seus filhos direto em flex iténs.*/
+    display: flex;
+    /* Alinha os flex iténs de acordo com o eixo do cotainer.*/
+    align-items: center;
+    /* Alinha os iténs flex no conteiner de acordo com a direção*/
+    justify-content: center;
+}
+form{
+    background-color: #fff;
+    /* Arredonda os cantos.*/
+    border-radius: 10px;
+    /* Largura máxima do elemento.*/
+    max-width: 500px;
+    /* Gerar espaço ao redor do conteúdo do elemento, 
+    50px para o lado superior e inferior,
+    40px para o lado direito e esquerdo.*/
+    padding: 50px 40px;
+    /* Adicionar sombra nos elementos*/
+    box-shadow: 5px 5px 15px; 
+}
+form h1{
+    /* Define o alinhamento do texto no elemento.*/
+    text-align: center;
+    /* Cria espaço ao redor do elemento*/
+    margin: 48px 0;
+    /* Tamanho da fonte*/
+    font-size: 36px;
+    /* Cor do texto.*/
+    color: #111;
+}
+.container{
+    /* Margem inferior do elemento.*/
+    margin-bottom: 12px;
+    /* Relativ-indica que está posicionado em relação sua posição normal.*/
+    position: relative;
+}
+.container input{
+    /* Define a largura do elemento.*/
+    width: 100%;
+    /* Define a altura do elemento.*/
+    height: 70px;
+    /* Remove a borda.*/
+    border: none;
+    background-color: #ededed;
+    border-radius: 4px;
+    color: #333;
+    /* Tamanho da fonte.*/
+    font-size: 18px;
+    /* Aumenta a largura do contorno do texto.*/
+    font-weight: 700;
+    /* Gera espaço ao redor do conteúdo do elemento
+    (superior, direito, inferior e esquerdo).*/
+    padding: 14px, 60px, 0, 10px;
+}
+label{
+    /* Transforma o texto deixando todas as letras em maiúsculo.*/
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: #9d9d9d;
+    /* Posiciona qualquer elemento de acordo com o elemento pai, deixando de fazer parte do fluxo comum do documento.*/
+    position: absolute;
+    /* Define altura entre linha.*/
+    line-height: 70px;
+    /* Posição vertical que necessita que o elemento tenha uma posição determinada*/
+    top: 0;
+    /* Distância da borda esquerda*/
+    left: 20px;
+    /* Impede a seleção de texto*/
+    user-select: none;
+    /* Se o elemento deve agir ou não a eventos do ponteiro.*/
+    pointer-events: none;
+    /* Altere o valor da propriedade suavemente em um tempo determinado.*/
+    transition: 0.5s;
+    
+}
+/* ~ - Quando ocorrer o foco no input altere as propriedade do label*/
+.container input:focus ~ label,
+.container input:valid ~ label {
+    left: 10px;
+    top: -16px;
+    color: #00acd7;
+}
+button{
+    /* Elemento em bloco não permite outro elento ao lado. exceto quando existir o elemento float, */
+    display: block;
+    /* Posiciona o elemento em bloco a direita. */
+    float: right;
+    width: 50%;
+    height: 70px;
+    /* Auto - centraliza horizontalmente o elemento em seu container. */
+    margin: 40px auto;
+    background-color: #00acd7;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    /* Muda o ponteiro do mouse. */
+    cursor: pointer;
+    /* Linear-mesma velocidade do ínicio ao fim. */
+    transition: 0.3s linear;
+}
+button:hover{
+    /* Altera a transparência do elemento*/
+    opacity: 0.5;
+}
+form a{
+    /* Não permite que o elemento tenha a propriedade float aplicada no elemento anterior. */
+    clear: both;
+    display: block;
+    text-align: center;
+    /* Remove a decoração padrão do elemento na tad a "link" remove o traço inferior*/
+    text-decoration: none;
+    font-size: 16px;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+form a:hover{
+    color: #111;
+}
+  
